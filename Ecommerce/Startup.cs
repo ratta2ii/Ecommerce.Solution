@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Session;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,13 @@ namespace Ecommerce
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
+
+      services.AddSession(options => {
+        options.IdleTimeout = System.TimeSpan.FromMinutes(30);
+        options.Cookie.HttpOnly = true;
+        // Make the session cookie essential
+        options.Cookie.IsEssential = true;
+      });
 
       services.AddEntityFrameworkMySql()
         .AddDbContext<EcommerceContext>(options => options   // Update Context to project name
@@ -52,6 +60,8 @@ namespace Ecommerce
       app.UseDeveloperExceptionPage();
 
       app.UseAuthentication();
+
+      app.UseSession();
 
       app.UseMvc(routes =>
       {
