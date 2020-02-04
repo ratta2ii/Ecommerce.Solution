@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Ecommerce.Models;
+@model IEnumerable<Ecommerce.Models.Product>
+
+
+<h2>Products</h2>
+<hr />
+@foreach (var products in Model)
+{
+    
+    <h3><li>@Html.ActionLink($"{products.Image}", "Details", new { readID = products.ProductId })</li></h3>
+}
