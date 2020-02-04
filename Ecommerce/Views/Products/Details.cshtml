@@ -1,0 +1,20 @@
+  
+@{
+  Layout = "_Layout";
+}
+
+@model Ecommerce.Models.Product
+
+<h2>Flavor Details</h2>
+<hr />
+@using (Html.BeginForm())
+{
+  <h3>@Html.DisplayNameFor(model => model.ProductId): @Html.DisplayFor(model => model.ProductId)</h3>
+   <h3>@Html.TextBoxFor(model => model.ProductId)</h3>
+  <input type="submit" value="Add to cart" class="btn btn-primary"/>
+
+}
+
+@* <p>@Html.ActionLink("Edit Flavor", "Edit", new {id = Model.FlavorId} )</p>
+<p>@Html.ActionLink("Delete Flavor", "Delete", new {id = Model.FlavorId})</p>
+<p>@Html.ActionLink("Back to list", "Index")</p> *@

@@ -3,14 +3,16 @@ using System;
 using Ecommerce.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Ecommerce.Migrations
 {
     [DbContext(typeof(EcommerceContext))]
-    partial class EcommerceContextModelSnapshot : ModelSnapshot
+    [Migration("20200204052053_Initial1")]
+    partial class Initial1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,24 +83,6 @@ namespace Ecommerce.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Ecommerce.Models.OrderProduct", b =>
-                {
-                    b.Property<int>("OrderProductId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("OrderId");
-
-                    b.Property<int>("ProductId");
-
-                    b.HasKey("OrderProductId");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("OrderProduct");
                 });
 
             modelBuilder.Entity("Ecommerce.Models.Product", b =>
@@ -226,19 +210,6 @@ namespace Ecommerce.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("Ecommerce.Models.OrderProduct", b =>
-                {
-                    b.HasOne("Ecommerce.Models.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Ecommerce.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Ecommerce.Models.Product", b =>
