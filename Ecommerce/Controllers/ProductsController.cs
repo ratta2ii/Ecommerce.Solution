@@ -25,9 +25,10 @@ namespace Ecommerce.Controllers
     }
 
     [HttpGet]
-    public ActionResult Details()
+    public ActionResult Details(int readID)
     {
-      return View();
+      var products = _db.Products.FirstOrDefault(product => product.ProductId==readID);
+      return View(products);
     }
 
 
