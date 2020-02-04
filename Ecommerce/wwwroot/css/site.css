@@ -54,3 +54,73 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+
+/* ------ Product Details Page ----------- */
+
+.product-container {
+    margin-top: 200px;
+    -webkit-box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
+    box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
+}
+
+.top-row {
+    min-height: 400px;
+}
+
+.bottom-row {
+   min-height: 300px;
+}
+
+.product-right-column {
+    padding-top: 85px;
+}
+
+.product-left-column {
+
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h2.product-description {
+    font-weight: bold;
+    margin: 40px 0 8px 0;
+}
+
+h6.sku-number {
+    margin-top: 50px;
+    font-weight: bold;
+    float: right;
+}
+
+.cart-button {
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #004085;
+    color: ghostwhite;
+    border: 3px solid #004085;
+}
+
+.free-shipping {
+    font-weight: 800;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.product-image {
+    margin-top: 75px;
+}
+
+/* --------- End of product details ---------- */

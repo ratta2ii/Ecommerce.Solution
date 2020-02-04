@@ -1,20 +1,54 @@
-  
 @{
-  Layout = "_Layout";
+Layout = "_Layout";
 }
+
+@* <link type="text/css" rel="stylesheet" href="./../wwwroot/css/details.css"> *@
 
 @model Ecommerce.Models.Product
 
-<h2>Flavor Details</h2>
+<div class="container">
+
+  <div class="card product-container">
+
+      <div class="row top-row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 product-left-column">
+              <!-- Image -->
+              <img class="product-image" src="https://picsum.photos/350" alt="image of a product">
+              @* <div class="image-test"></div>> "https://picsum.photos/350" *@
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 product-right-column">
+              <h4 class="product-title">@Html.DisplayFor(model => model.Name)</h4>
+              <h3 class="price"><i>$@Html.DisplayFor(model => model.Price).00</i></h3>
+              <input id="addToCart-button" type="submit" value="Add to Cart" class="cart-button"/>
+              <p class="free-shipping">Free shipping on orders over $25.00</p>
+          </div>
+          <div class="col-md-1"></div>
+      </div>
+
+      <div class="row bottom-row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+              <h2 class="product-description">Description</h2>
+              <p>@Html.DisplayFor(model => model.Description)</p>
+              <h6 class="sku-number">@Html.DisplayFor(model => model.Sku)</h6>
+          </div>
+          <div class="col-md-1"></div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+@* <h2>Flavor Details</h2>
 <hr />
 @using (Html.BeginForm())
 {
-  <h3>@Html.DisplayNameFor(model => model.ProductId): @Html.DisplayFor(model => model.ProductId)</h3>
-   <h3>@Html.TextBoxFor(model => model.ProductId)</h3>
-  <input type="submit" value="Add to cart" class="btn btn-primary"/>
+<h3>@Html.DisplayNameFor(model => model.ProductId): @Html.DisplayFor(model => model.ProductId)</h3>
+ <h3>@Html.TextBoxFor(model => model.ProductId)</h3>
+<input type="submit" value="Add to cart" class="btn btn-primary"/>
 
-}
-
-@* <p>@Html.ActionLink("Edit Flavor", "Edit", new {id = Model.FlavorId} )</p>
-<p>@Html.ActionLink("Delete Flavor", "Delete", new {id = Model.FlavorId})</p>
-<p>@Html.ActionLink("Back to list", "Index")</p> *@
+}  *@
