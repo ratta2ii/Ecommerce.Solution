@@ -1,4 +1,10 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿body {
+    background: url('../../img/green.jpg') no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+}   
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
@@ -60,7 +66,7 @@ body {
 /* ------ Product Details Page ----------- */
 
 .product-container {
-    margin-top: 200px;
+    margin-top: 160px;
     -webkit-box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
     box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
 }
@@ -74,16 +80,23 @@ body {
 }
 
 .product-right-column {
-    padding-top: 85px;
+    margin-top: 85px;
+    background-color: rgb(227, 241, 249);
 }
 
 .product-left-column {
 
 }
 
+.product-image {
+    margin-top: 85px;
+}
+
+
 .product-title {
     font-weight: bold;
     margin-bottom: 40px;
+    padding-top: 30px;
 }
 
 .price {
@@ -94,12 +107,6 @@ body {
 h2.product-description {
     font-weight: bold;
     margin: 40px 0 8px 0;
-}
-
-h6.sku-number {
-    margin-top: 50px;
-    font-weight: bold;
-    float: right;
 }
 
 .cart-button {
@@ -119,8 +126,52 @@ h6.sku-number {
     margin-top: 20px;
 }
 
-.product-image {
-    margin-top: 75px;
+h6.sku-number {
+    margin-top: 50px;
+    font-weight: bold;
+    float: right;
+    padding-bottom: 15px;
 }
 
 /* --------- End of product details ---------- */
+
+
+/* --------- All Products ----------- */
+
+.product-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    max-height: 400px;
+    margin: auto;
+    font-family: arial;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background-color: rgb(176, 176, 176);
+  }
+  
+
+  .card-price {
+    color: grey;
+    font-size: 18px;
+    float: right;
+  } 
+  
+  .product-name {
+      float: left;
+  }
+
+  /* .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  } */

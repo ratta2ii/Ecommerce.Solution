@@ -25,9 +25,9 @@ namespace Ecommerce.Controllers
     }
 
     [HttpGet]
-    public ActionResult Details(int readID)
+    public ActionResult Details()  // Replace argument with (int id)
     {
-      var products = _db.Products.FirstOrDefault(product => product.ProductId==readID);
+      var products = _db.Products.FirstOrDefault(product => product.ProductId == 1);  // Replace this 1 value with the argument (id)
       return View(products);
     }
 

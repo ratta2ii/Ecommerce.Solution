@@ -1,5 +1,5 @@
 @{
-Layout = "_Layout";
+    Layout = "_Layout";
 }
 
 @* <link type="text/css" rel="stylesheet" href="./../wwwroot/css/details.css"> *@
@@ -19,7 +19,7 @@ Layout = "_Layout";
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-5 product-right-column">
-              <h4 class="product-title">@Html.DisplayFor(model => model.Name)</h4>
+              <h1 class="product-title">@Html.DisplayFor(model => model.Name)</h1>
               <h3 class="price"><i>$@Html.DisplayFor(model => model.Price).00</i></h3>
               <input id="addToCart-button" type="submit" value="Add to Cart" class="cart-button"/>
               <p class="free-shipping">Free shipping on orders over $25.00</p>
@@ -32,7 +32,7 @@ Layout = "_Layout";
           <div class="col-md-10">
               <h2 class="product-description">Description</h2>
               <p>@Html.DisplayFor(model => model.Description)</p>
-              <h6 class="sku-number">@Html.DisplayFor(model => model.Sku)</h6>
+              <h6 class="sku-number">SKU#@Html.DisplayFor(model => model.Sku)</h6>
           </div>
           <div class="col-md-1"></div>
       </div>
