@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommerce.Migrations
 {
     [DbContext(typeof(EcommerceContext))]
-    [Migration("20200205004500_Initial")]
-    partial class Initial
+    [Migration("20200205234052_new")]
+    partial class @new
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,6 +25,8 @@ namespace Ecommerce.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<bool>("Completed");
+
+                    b.Property<int>("CustomerId");
 
                     b.Property<DateTime>("Date");
 

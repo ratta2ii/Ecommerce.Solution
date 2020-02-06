@@ -21,7 +21,17 @@
           <div class="col-md-5 product-right-column">
               <h1 class="product-title">@Html.DisplayFor(model => model.Name)</h1>
               <h3 class="price"><i>$@Html.DisplayFor(model => model.Price).00</i></h3>
+              @using (Html.BeginForm())
+              {
+                @Html.HiddenFor(model=>model.ProductId)
+                <h3>@Html.HiddenFor(model=> model.Name)</h3>
+                <h3>@Html.HiddenFor(model=> model.Description)</h3>
+                <h3>@Html.HiddenFor(model=> model.Price)</h3>
+                <h3>@Html.HiddenFor(model=> model.ProductId)</h3>
+                <h3>@Html.HiddenFor(model=> model.ProductImage)</h3>
+                <h3>@Html.HiddenFor(model => model.Sku)</h3>
               <input id="addToCart-button" type="submit" value="Add to Cart" class="cart-button"/>
+              }
               <p class="free-shipping">Free shipping on orders over $25.00</p>
           </div>
           <div class="col-md-1"></div>

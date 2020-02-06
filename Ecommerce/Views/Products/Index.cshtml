@@ -20,6 +20,7 @@
                 <img src="https://picsum.photos/350" alt="Product Image" style="width:100%">
                 @* <h5 class="product-name">@product.Name</h5> *@
                 <p class="card-price">$@product.Price</p>
+                <p>@Html.ActionLink("Product Deetz", "Details", new {id = product.ProductId} )</p>
                 @* <p><button>Add to Cart</button></p> *@
             </div>  
          </a>  
