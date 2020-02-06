@@ -2,10 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1 style="text-align: center;">Welcome to eCommerce!</h1>
+<h1 id="main-title" style="text-align: center;">Welcome to eCommerce</h1>
 
 <div style="text-align: center;">
-    <p>@Html.ActionLink("See all Products", "Index", "Products")</p>
-    <p>@Html.ActionLink("Create an account/login/logout", "Index", "Account")</p>
-    @* <p>@Html.ActionLink("View your cart", "Index", "Order")</p>  *@
+     <a class="products-link-button" asp-area="" asp-controller="Products" asp-action="Index">See Our Products</a>
  </div>  
