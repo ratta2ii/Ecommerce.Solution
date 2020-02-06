@@ -1,6 +1,5 @@
 ﻿body {
-    background: url('../../img/green.jpg') no-repeat;
-    background-size: 100% 100%;
+    background: url('../../img/lake-trees.jpg') no-repeat;
     background-size: cover;
 }   
 
@@ -12,6 +11,17 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
+
+header {
+    background-color: #306ca0;
+    color: white;
+}
+
+.navbar-brand {
+    color: aliceblue;
+}
+
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -65,7 +75,7 @@ body {
 
 /* ------ Product Details Page ----------- */
 
-.product-container {
+.product-details-container {
     margin-top: 160px;
     -webkit-box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
     box-shadow: 6px 7px 15px 3px rgba(0,0,0,0.91);
@@ -138,40 +148,72 @@ h6.sku-number {
 
 /* --------- All Products ----------- */
 
+.products-container {
+    width: 65%;
+    padding: 0px;
+    margin: 100px auto;
+} 
+
 .product-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 350px;
-    max-height: 400px;
-    margin: auto;
-    font-family: arial;
-    overflow: hidden;
-    margin-bottom: 50px;
+    width: 350px;
+    height: 350px;
     background-color: rgb(176, 176, 176);
-  }
-  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 30px;
+    
+    float: left;
+    overflow: hidden;
+}
 
-  .card-price {
-    color: grey;
-    font-size: 18px;
-    float: right;
-  } 
-  
-  .product-name {
-      float: left;
-  }
 
-  /* .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
+.card-header {
     width: 100%;
-    font-size: 18px;
-  }
+    height: 75%;
+    padding: 0px;
+    margin: 0px;
+    background-color: lightgray;
+}
+
+.product-images {
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer {
+    width: 100%;
+    height: 25%;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(243, 255, 227);
+}
+
+p.product-link {
+    margin-top: 50px;
+    margin-left: 12px;
+    float: right;
+    margin-right: 15px;
+}
+
+
+.card-title {
+    float: left;
+    margin-top: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 25px;
+    width: 60%;
+    overflow: hidden; 
+    color: black;   
+} 
   
-  .card button:hover {
-    opacity: 0.7;
-  } */
+
+
+
+
+
+
+
+
+
+
+

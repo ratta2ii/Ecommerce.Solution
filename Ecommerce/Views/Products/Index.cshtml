@@ -6,25 +6,26 @@
 @model IEnumerable<Ecommerce.Models.Product>
 
 
+<div class="products-container">
+
+    @foreach(Product product in Model)
+    {  
+        <div class="card product-card">
+            <div class="card-header">
+            <img class="product-images" src="https://picsum.photos/550" alt="Image of Product">
+            </div>
+            <div class="card-footer">
+             
+                <h5 class="card-title">@product.Name</h5>
+                <p class="product-link">@Html.ActionLink("See Details", "Details", new {id = product.ProductId})</p>
+                
+                @* <p class="card-price">$@product.Price</p> *@
+                
+            </div>
+        </div>
+    }
+</div>  
 
 
 
-<div class="container products-container">
-
-  <div class="row parent-element">
-
-      @foreach(Product product in Model)
-      {
-         <a class="" asp-area="" asp-controller="Products" asp-action="Details"> 
-            <div class="card product-card">
-                <img src="https://picsum.photos/350" alt="Product Image" style="width:100%">
-                @* <h5 class="product-name">@product.Name</h5> *@
-                <p class="card-price">$@product.Price</p>
-                @* <p><button>Add to Cart</button></p> *@
-            </div>  
-         </a>  
-      }
-
-  </div>  
-
-</div>
+   
