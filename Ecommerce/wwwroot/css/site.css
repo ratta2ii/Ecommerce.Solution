@@ -1,6 +1,7 @@
 ﻿body {
     background: url('../../img/lake-trees.jpg') no-repeat;
     background-size: cover;
+    margin-bottom: 100px;
 }   
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -85,13 +86,22 @@ body {
     min-height: 400px;
 }
 
+.single-product-image {
+  width: 400px;
+  height: 400px;
+  margin-top: 75px;
+}
+
 .bottom-row {
    min-height: 300px;
 }
 
 .product-right-column {
-    margin-top: 85px;
-    background-color: rgb(227, 241, 249);
+    margin-top: 75px;
+    margin-top: 75px;
+    background-color: rgb(240, 237, 245);
+    padding-left: 30px;
+  
 }
 
 .product-left-column {
@@ -157,10 +167,8 @@ h6.sku-number {
 .product-card {
     width: 350px;
     height: 350px;
-    background-color: rgb(176, 176, 176);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 30px;
-    
+    margin: 30px; 
     float: left;
     overflow: hidden;
 }
@@ -171,12 +179,14 @@ h6.sku-number {
     height: 75%;
     padding: 0px;
     margin: 0px;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
 }
 
 .product-images {
     width: 100%;
     height: 100%;
+
 }
 
 .card-footer {
@@ -184,7 +194,8 @@ h6.sku-number {
     height: 25%;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(243, 255, 227);
+    /* background-color: rgb(243, 255, 227); */
+    background-color: aliceblue;
 }
 
 p.product-link {
