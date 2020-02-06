@@ -11,6 +11,6 @@ namespace Ecommerce.Models
         public string Description { get; set; }
         public string Sku { get; set; }
         public string ProductImage { get; set; }
-        // public int RemainingInventory { get; set; }
+
     }
 }
