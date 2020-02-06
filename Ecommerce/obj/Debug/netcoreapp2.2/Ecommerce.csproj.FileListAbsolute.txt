@@ -64,3 +64,4 @@
 /Users/Guest/Desktop/eCommerce.Solution/Ecommerce/obj/Debug/netcoreapp2.2/Ecommerce.dll
 /Users/Guest/Desktop/eCommerce.Solution/Ecommerce/obj/Debug/netcoreapp2.2/Ecommerce.pdb
 /Users/Guest/Desktop/eCommerce.Solution/Ecommerce/obj/Debug/netcoreapp2.2/Ecommerce.csproj.CopyComplete
+/home/amt/Desktop/eCommerce.Solution/Ecommerce/obj/Debug/netcoreapp2.2/Razor/Views/Orders/Index.g.cshtml.cs

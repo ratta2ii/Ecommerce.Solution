@@ -16,16 +16,20 @@ namespace Ecommerce.Controllers
       _db = db;
     }
 
-    // [HttpPost]
-    // public ActionResult Create(Product newProduct)
+    public ActionResult Index()
+    {
+      string query = "SELECT ProductId,Price,Name,Description,Sku,ProductImage FROM Products RIGHT JOIN OrderProduct Using(ProductId) RIGHT JOIN Orders Using(OrderId) WHERE OrderId>0;";
+      var products = _db.Products.FromSql(query).ToList();
+      // List<Product> products = Order.GetOrderedProducts();
+      // System.Console.WriteLine(products.Count());
+      return View(products);
+    }
+
+    // public ActionResult Index()
     // {
-    //   //try loading order from order table, if order found for customer, use fetched order from db. 
-    //   //else create new order and add to db.
-    //   Order newOrder = new Order();
-    //   newOrder.AddProduct(newProduct);
-    //   _db.Orders.Add(newOrder);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index","Products");
+    //   var listOfProducts = _db.OrderProduct.ToList();
+    //   System.Console.WriteLine(listOfProducts);
+    //   return View(listOfProducts);
     // }
   }
 } 

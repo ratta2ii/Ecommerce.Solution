@@ -7,18 +7,23 @@ namespace Ecommerce.Models
     {
         public int OrderId { get; set; }
         // public int CustomerId { get; set; }
-        public int Total { get; set; }
         public DateTime Date { get; set; }
-        public bool Completed { get; set; }
-        public virtual ICollection<Product> Cart { get; set; }
+        public  ICollection<OrderProduct> OrderProducts { get; set; }
+        public  static List<Product> Cart { get; set; }
         public Order()
         {
-            this.Cart = new HashSet<Product>();
+            OrderProducts= new HashSet<OrderProduct>();
+            Cart = new List<Product>();
+        }
+        public void AddProduct(Product new_product)
+        {
+            Cart.Add(new_product);
+        }
+        public static List<Product> GetOrderedProducts()
+        {
+                return Cart;
         }
 
-        public void AddProduct(Product newProduct)
-        {
-            this.Cart.Add(newProduct);
-        }
+        
     }
 }

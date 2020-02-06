@@ -1,3 +1,4 @@
+
 namespace Ecommerce.Models
 {
     public class OrderProduct

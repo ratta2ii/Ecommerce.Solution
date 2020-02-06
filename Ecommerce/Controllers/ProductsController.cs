@@ -25,9 +25,9 @@ namespace Ecommerce.Controllers
     }
 
     [HttpGet]
-    public ActionResult Details()  // Replace argument with (int id)
+    public ActionResult Details(int readID)  // Replace argument with (int id)
     {
-      var products = _db.Products.FirstOrDefault(product => product.ProductId == 1);  // Replace this 1 value with the argument (id)
+      var products = _db.Products.FirstOrDefault(product => product.ProductId==readID);  // Replace this 1 value with the argument (id)
       return View(products);
     }
 
@@ -35,8 +35,9 @@ namespace Ecommerce.Controllers
     [HttpPost]
     public ActionResult Details(Product newProduct) //technically addtocart
     {
+      
       System.Console.WriteLine("start of addtocart");
-      int? OrderId = HttpContext.Session.GetInt32("orderId");
+      int? OrderId = HttpContext.Session.GetInt32("OrderId");
       //try loading order from order table, if order found for customer, use fetched order from db. 
       //else create new order and add to db.
       Order thisOrder;
@@ -49,7 +50,7 @@ namespace Ecommerce.Controllers
          thisOrder = _db.Orders.FirstOrDefault(orders => orders.OrderId == OrderId);
       }
       
-      thisOrder.AddProduct(newProduct);
+       thisOrder.AddProduct(newProduct);
       _db.Orders.Add(thisOrder);
 
       _db.OrderProduct.Add(new OrderProduct() { ProductId = newProduct.ProductId, OrderId = thisOrder.OrderId});
