@@ -70,6 +70,31 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+  margin-top: 100px;
+}
+
+.footer-text {
+  color: #6ae000;
+}
+
+
+/* ------------- Home Page ---------------- */
+
+h1#main-title {
+  font-size: 75px;
+  margin-top: 275px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.products-link-button {
+  background-color: #102561;
+  padding: 14px 18px;
+  font-size: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
 }
 
 
