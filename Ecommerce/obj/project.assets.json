@@ -12156,11 +12156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/eCommerce.Solution/Ecommerce/Ecommerce.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/eCommerce/Ecommerce/Ecommerce.csproj",
       "projectName": "Ecommerce",
-      "projectPath": "/Users/Guest/Desktop/eCommerce.Solution/Ecommerce/Ecommerce.csproj",
+      "projectPath": "/Users/Guest/Desktop/eCommerce/Ecommerce/Ecommerce.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/eCommerce.Solution/Ecommerce/obj/",
+      "outputPath": "/Users/Guest/Desktop/eCommerce/Ecommerce/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
