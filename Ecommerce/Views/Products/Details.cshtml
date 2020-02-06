@@ -42,6 +42,7 @@
           <div class="col-md-10">
               <h2 class="product-description">Description</h2>
               <p>@Html.DisplayFor(model => model.Description)</p>
+              <a class="details-back-button" asp-area="" asp-controller="Products" asp-action="Index">Back To Products</a>
               <h6 class="sku-number">SKU#@Html.DisplayFor(model => model.Sku)</h6>
           </div>
           <div class="col-md-1"></div>
@@ -50,15 +51,3 @@
   </div>
 </div>
 
-
-
-
-@* <h2>Flavor Details</h2>
-<hr />
-@using (Html.BeginForm())
-{
-<h3>@Html.DisplayNameFor(model => model.ProductId): @Html.DisplayFor(model => model.ProductId)</h3>
- <h3>@Html.TextBoxFor(model => model.ProductId)</h3>
-<input type="submit" value="Add to cart" class="btn btn-primary"/>
-
-}  *@

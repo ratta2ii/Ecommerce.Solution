@@ -2,7 +2,11 @@
     background: url('../../img/lake-trees.jpg') no-repeat;
     background-size: cover;
     margin-bottom: 100px;
-}   
+}  
+
+a:hover { 
+  text-decoration: none; 
+}
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -11,6 +15,7 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+
 }
 
 header {
@@ -20,6 +25,11 @@ header {
 
 .navbar-brand {
     color: aliceblue;
+   
+}
+
+.nav-right {
+  margin-left: 4%;
 }
 
 
@@ -64,13 +74,13 @@ body {
 }
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   white-space: nowrap;
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
-  margin-top: 100px;
+  background-color: black;
 }
 
 .footer-text {
@@ -96,8 +106,6 @@ h1#main-title {
   text-decoration: none;
   color: white;
 }
-
-
 
 /* ------ Product Details Page ----------- */
 
@@ -151,7 +159,7 @@ h1#main-title {
 
 h2.product-description {
     font-weight: bold;
-    margin: 40px 0 8px 0;
+    margin: 40px 0 50px 0;
 }
 
 .cart-button {
@@ -172,10 +180,15 @@ h2.product-description {
 }
 
 h6.sku-number {
-    margin-top: 50px;
+    margin-top: 10px;
     font-weight: bold;
     float: right;
     padding-bottom: 15px;
+}
+
+.details-back-button {
+  margin-top: 50px;
+  text-decoration: none;
 }
 
 /* --------- End of product details ---------- */
@@ -185,7 +198,7 @@ h6.sku-number {
 
 .products-container {
     width: 65%;
-    padding: 0px;
+    padding-bottom: 100px;
     margin: 100px auto;
 } 
 
@@ -253,3 +266,7 @@ p.product-link {
 
 
 
+
+
+
+https://github.com/ratta2ii/Ecommerce.Solution.git
